@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+void attemptWithdraw(int balance, int amount) {
+    cout << "Attempting withdrawal...\n";
+
+    if (amount <= balance) {
+        balance = balance - amount;
+        cout << "Withdrawal successful. New balance inside function: "
+             << balance << endl;
+    } else {
+        cout << "Withdrawal failed. Not enough balance.\n";
+    }
+}
+
+int main() {
+    int balance = 5000;
+    int withdrawAmount = 1200;
+
+    attemptWithdraw(balance, withdrawAmount);
+
+
+    cout << "Balance in main: " << balance << endl;
+
+    return 0;
+}
